@@ -3,7 +3,7 @@ package com.nikiforov.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:config/${env}.properties"
+        "classpath:config/${environment}.properties"
 })
 public interface DriverConfig extends Config {
     @Key("browserName")
