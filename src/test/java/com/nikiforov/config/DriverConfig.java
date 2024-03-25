@@ -6,19 +6,20 @@ import org.aeonbits.owner.Config;
         "classpath:config/${environment}.properties"
 })
 public interface DriverConfig extends Config {
-    @Key("browserName")
+
+    @Key("browser")
     @DefaultValue("chrome")
     String browserName();
 
-    @Key("browserVersion")
+    @Key("version")
     @DefaultValue("100.0")
     String browserVersion();
 
-    @Key("browserSize")
+    @Key("browserResolution")
     @DefaultValue("1920x1080")
     String browserSize();
 
-    @Key("browserRemoteUrl")
+    @Key("remoteUrl")
     String browserRemoteUrl();
 
 }

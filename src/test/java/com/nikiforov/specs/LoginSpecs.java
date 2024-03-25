@@ -12,10 +12,7 @@ import static io.restassured.filter.log.LogDetail.STATUS;
 public class LoginSpecs {
     public static RequestSpecification loginRequestSpec = with()
             .filter(withCustomTemplates())
-            .log().uri()
-            .log().method()
-            .log().body()
-            .log().headers();
+            .log().all();
 
     public static ResponseSpecification loginResponseSpec = new ResponseSpecBuilder()
             .log(STATUS)
